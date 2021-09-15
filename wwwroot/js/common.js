@@ -25,7 +25,7 @@ function reload_chart() {
             }
             if (r[0]) {
                 document.querySelector('#linkEditDirection').setAttribute('href', 'directions/edit/' + r[0]);
-                document.querySelector('#linkDeleteDirection').setAttribute('href', 'directions/edit/' + r[0]);
+                document.querySelector('#linkDeleteDirection').setAttribute('href', 'directions/delete/' + r[0]);
                 
             } else {
                 document.querySelector('#linkEditDirection').setAttribute('href', '#');

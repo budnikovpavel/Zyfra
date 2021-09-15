@@ -120,7 +120,7 @@ namespace Zyfra.Repositories.Abstractions
         /// <returns>Сущность</returns>
         public virtual async Task DeleteAsync(TId id, CancellationToken cancellationToken = default)
         {
-            var entity = await DbSet.FindAsync(id, cancellationToken);
+            var entity = await DbSet.FindAsync(new object[] { id }, cancellationToken);
             if (entity == null) throw new ArgumentNullException(nameof(entity));
             var transaction = await DbContext.Database.BeginTransactionAsync(cancellationToken);
             try
